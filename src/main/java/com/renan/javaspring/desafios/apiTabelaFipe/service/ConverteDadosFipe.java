@@ -1,4 +1,4 @@
-package com.renan.javaspring.apiTabelaFipe.service;
+package com.renan.javaspring.desafios.apiTabelaFipe.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

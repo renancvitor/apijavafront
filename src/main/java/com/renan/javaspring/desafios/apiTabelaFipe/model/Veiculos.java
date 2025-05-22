@@ -1,4 +1,4 @@
-package com.renan.javaspring.apiTabelaFipe.model;
+package com.renan.javaspring.desafios.apiTabelaFipe.model;
 
 public class Veiculos {
     private String tipo;

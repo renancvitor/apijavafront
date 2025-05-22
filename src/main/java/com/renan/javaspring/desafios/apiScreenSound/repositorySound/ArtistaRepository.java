@@ -1,7 +1,7 @@
-package com.renan.javaspring.apiScreenSound.repositorySound;
+package com.renan.javaspring.desafios.apiScreenSound.repositorySound;
 
-import com.renan.javaspring.apiScreenSound.modelSound.Artista;
-import com.renan.javaspring.apiScreenSound.modelSound.Musica;
+import com.renan.javaspring.desafios.apiScreenSound.modelSound.Artista;
+import com.renan.javaspring.desafios.apiScreenSound.modelSound.Musica;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

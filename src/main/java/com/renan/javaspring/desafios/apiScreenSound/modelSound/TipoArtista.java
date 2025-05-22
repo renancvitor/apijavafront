@@ -1,6 +1,4 @@
-package com.renan.javaspring.apiScreenSound.modelSound;
-
-import com.renan.javaspring.model.Categoria;
+package com.renan.javaspring.desafios.apiScreenSound.modelSound;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package com.renan.javaspring.apiScreenSound.service;
+package com.renan.javaspring.desafios.apiTabelaFipe.service;
 
 import java.io.IOException;
 import java.net.URI;
@@ -6,8 +6,9 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class ConsumoApiSound {
-    public String obterDadosSound(String endereco) {
+public class ConsumoApiFipe {
+
+    public String obterDadosFipe(String endereco) {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(endereco))

@@ -1,4 +1,4 @@
-package com.renan.javaspring.apiScreenSound.modelSound;
+package com.renan.javaspring.desafios.apiScreenSound.modelSound;
 
 import jakarta.persistence.*;
 

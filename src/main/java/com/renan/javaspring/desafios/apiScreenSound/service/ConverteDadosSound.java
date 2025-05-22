@@ -1,4 +1,4 @@
-package com.renan.javaspring.apiScreenSound.service;
+package com.renan.javaspring.desafios.apiScreenSound.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

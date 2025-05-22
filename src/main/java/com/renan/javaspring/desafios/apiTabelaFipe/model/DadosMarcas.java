@@ -1,4 +1,4 @@
-package com.renan.javaspring.apiTabelaFipe.model;
+package com.renan.javaspring.desafios.apiTabelaFipe.model;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

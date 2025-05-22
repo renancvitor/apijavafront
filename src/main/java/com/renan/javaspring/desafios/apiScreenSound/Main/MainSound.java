@@ -1,11 +1,11 @@
-package com.renan.javaspring.apiScreenSound.Main;
+package com.renan.javaspring.desafios.apiScreenSound.Main;
 
-import com.renan.javaspring.apiScreenSound.modelSound.Artista;
-import com.renan.javaspring.apiScreenSound.modelSound.Musica;
-import com.renan.javaspring.apiScreenSound.modelSound.TipoArtista;
-import com.renan.javaspring.apiScreenSound.repositorySound.ArtistaRepository;
-import com.renan.javaspring.apiScreenSound.service.ConsumoApiSound;
-import com.renan.javaspring.apiScreenSound.service.ConverteDadosSound;
+import com.renan.javaspring.desafios.apiScreenSound.modelSound.Artista;
+import com.renan.javaspring.desafios.apiScreenSound.modelSound.Musica;
+import com.renan.javaspring.desafios.apiScreenSound.modelSound.TipoArtista;
+import com.renan.javaspring.desafios.apiScreenSound.repositorySound.ArtistaRepository;
+import com.renan.javaspring.desafios.apiScreenSound.service.ConsumoApiSound;
+import com.renan.javaspring.desafios.apiScreenSound.service.ConverteDadosSound;
 
 import java.util.List;
 import java.util.Optional;

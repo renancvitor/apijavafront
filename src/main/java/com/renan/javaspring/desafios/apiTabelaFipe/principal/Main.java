@@ -1,8 +1,10 @@
-package com.renan.javaspring.apiTabelaFipe.principal;
+package com.renan.javaspring.desafios.apiTabelaFipe.principal;
 
+import com.renan.javaspring.apiTabelaFipe.apiTabelaFipe.model.*;
 import com.renan.javaspring.apiTabelaFipe.model.*;
-import com.renan.javaspring.apiTabelaFipe.service.ConsumoApiFipe;
-import com.renan.javaspring.apiTabelaFipe.service.ConverteDadosFipe;
+import com.renan.javaspring.desafios.apiTabelaFipe.model.*;
+import com.renan.javaspring.desafios.apiTabelaFipe.service.ConsumoApiFipe;
+import com.renan.javaspring.desafios.apiTabelaFipe.service.ConverteDadosFipe;
 
 import java.util.*;
 import java.util.stream.Collectors;

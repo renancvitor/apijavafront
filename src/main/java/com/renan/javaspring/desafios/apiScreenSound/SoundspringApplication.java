@@ -1,7 +1,7 @@
-package com.renan.javaspring.apiScreenSound;
+package com.renan.javaspring.desafios.apiScreenSound;
 
-import com.renan.javaspring.apiScreenSound.Main.MainSound;
-import com.renan.javaspring.apiScreenSound.repositorySound.ArtistaRepository;
+import com.renan.javaspring.desafios.apiScreenSound.Main.MainSound;
+import com.renan.javaspring.desafios.apiScreenSound.repositorySound.ArtistaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
