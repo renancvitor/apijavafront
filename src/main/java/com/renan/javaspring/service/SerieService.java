@@ -2,6 +2,7 @@ package com.renan.javaspring.service;
 
 import com.renan.javaspring.dto.EpisodioDTO;
 import com.renan.javaspring.dto.SerieDTO;
+import com.renan.javaspring.model.Categoria;
 import com.renan.javaspring.model.Serie;
 import com.renan.javaspring.repository.SerieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,10 +63,14 @@ public class SerieService {
     }
 
     public List<EpisodioDTO> obterTemporadasPorNumero(Long id, Long numero) {
-
         return repository.obterEpisodiosPorTemporada(id, numero)
                 .stream()
                 .map(e -> new EpisodioDTO(e.getTemporada(), e.getNumeroEpisodio(), e.getTitulo()))
                 .collect(Collectors.toList());
+    }
+
+    public List<SerieDTO> obterSeriesPorCategoria(String nomeGenero) {
+        Categoria categoria = Categoria.fromPortugues(nomeGenero);
+        return converteDados(repository.findByGenero(categoria));
     }
 }
