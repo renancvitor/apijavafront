@@ -1,5 +1,6 @@
 package com.renan.javaspring.controller;
 
+import com.renan.javaspring.dto.EpisodioDTO;
 import com.renan.javaspring.dto.SerieDTO;
 import com.renan.javaspring.service.SerieService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,5 +36,10 @@ public class SerieController {
     @GetMapping("/{id}")
     public SerieDTO obterPorId(@PathVariable Long id) {
         return service.obterPorId(id);
+    }
+
+    @GetMapping("/{id}/temporadas/todas")
+    public List<EpisodioDTO> obterTodasTemporadas(@PathVariable Long id) {
+        return service.obterTodasTemporadas(id);
     }
 }
