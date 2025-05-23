@@ -30,4 +30,8 @@ public class SerieService {
                         s.getSinops()))
                 .collect(Collectors.toList());
     }
+
+    public List<SerieDTO> obterLancamentos() {
+        return converteDados(repository.findTop5ByOrderByEpisodiosDataLancamentoDesc());
+    }
 }
