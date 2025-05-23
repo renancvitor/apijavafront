@@ -3,6 +3,7 @@ package com.renan.javaspring.service;
 import com.renan.javaspring.dto.EpisodioDTO;
 import com.renan.javaspring.dto.SerieDTO;
 import com.renan.javaspring.model.Categoria;
+import com.renan.javaspring.model.Episodio;
 import com.renan.javaspring.model.Serie;
 import com.renan.javaspring.repository.SerieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,24 @@ public class SerieService {
 
     public List<SerieDTO> obterTop5Series() {
         return converteDados(repository.findTop5ByOrderByAvaliacaoDesc());
+    }
+
+    public List<EpisodioDTO> obterTop5Episodios(Long idSerie) {
+        Serie serie = repository.findById(idSerie)
+                .orElseThrow(() -> new RuntimeException("Série não encontrada"));
+
+        List<Episodio> episodios = repository.topEpisodiosPorSerie(serie);
+        return converteDadosEp(episodios);
+    }
+
+
+    private List<EpisodioDTO> converteDadosEp(List<Episodio> episodios) {
+        return episodios.stream()
+                .map(e -> new EpisodioDTO(
+                        e.getNumeroEpisodio(),
+                        e.getTemporada(),
+                        e.getTitulo()
+                )).collect(Collectors.toList());
     }
 
     private List<SerieDTO> converteDados(List<Serie> series) {
