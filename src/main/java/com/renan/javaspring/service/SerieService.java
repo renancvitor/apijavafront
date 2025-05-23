@@ -27,15 +27,6 @@ public class SerieService {
         return converteDados(repository.findTop5ByOrderByAvaliacaoDesc());
     }
 
-    public List<EpisodioDTO> obterTop5Episodios(Long idSerie) {
-        Serie serie = repository.findById(idSerie)
-                .orElseThrow(() -> new RuntimeException("Série não encontrada"));
-
-        List<Episodio> episodios = repository.topEpisodiosPorSerie(serie);
-        return converteDadosEp(episodios);
-    }
-
-
     private List<EpisodioDTO> converteDadosEp(List<Episodio> episodios) {
         return episodios.stream()
                 .map(e -> new EpisodioDTO(
@@ -91,5 +82,14 @@ public class SerieService {
     public List<SerieDTO> obterSeriesPorCategoria(String nomeGenero) {
         Categoria categoria = Categoria.fromPortugues(nomeGenero);
         return converteDados(repository.findByGenero(categoria));
+    }
+
+    // Aqui
+    public List<EpisodioDTO> obterTop5Episodios(Long idSerie) {
+        Serie serie = repository.findById(idSerie)
+                .orElseThrow(() -> new RuntimeException("Série não encontrada"));
+
+        List<Episodio> episodios = repository.topEpisodiosPorSerie(serie);
+        return converteDadosEp(episodios);
     }
 }
